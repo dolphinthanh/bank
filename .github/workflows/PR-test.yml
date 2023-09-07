@@ -11,4 +11,4 @@ jobs:
       - uses: seferov/pr-test-action@master
         with:
            title-regex: '^TAU-\d+\s.+'
-           error-message: 'Add Ticket ID to your title e.g. "TAU-1"'
+           error-message: 'Add Ticket ID to your title e.g. "TAU-Update README"'
