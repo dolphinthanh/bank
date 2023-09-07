@@ -20,5 +20,5 @@ jobs:
 
     - uses: actions/upload-artifact@master
       with:
-          name: digibank.war
+          name: digibank1.war
           path: ./target/*digitalbank*.war

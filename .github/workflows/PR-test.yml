@@ -1,0 +1,14 @@
+name: Pull Request check naming convention
+
+on:
+   pull_request:
+      types: ['opened', 'edited', 'reopened', 'synchronize']
+
+jobs:
+   pr-lint:
+      runs-on: window-latest
+      steps:
+      - uses: seferov/pr-test-action@master
+        with:
+           title-regex: '^TAU-\d+\s.+'
+           error-message: 'Add Ticket ID to your title e.g. "TAU-Update README"'
