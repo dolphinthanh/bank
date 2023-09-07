@@ -1,0 +1,16 @@
+name: run hello1
+
+on:
+   push: 
+      branches:
+         'feature/*'
+
+jobs:
+   Hello1:
+      runs-on: 'ubuntu-lastest'
+
+      steps:
+       - name: Checkout
+         uses: actions/checkout@v4.0.0
+       - name: run unit tests
+         run: mvn test
