@@ -7,7 +7,7 @@ on:
 
 jobs:
    Hello1:
-      runs-on: 'ubuntu-lastest'
+      runs-on: 'windows-latest'
 
       steps:
        - name: Checkout
