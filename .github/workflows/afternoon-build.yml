@@ -9,4 +9,16 @@ jobs:
    runs-on: window-latest
    steps:
     - name: Checkout
-      uses:
+      uses: actions/checkout@v3.3.0
+
+
+    - name: Run Unit Tests
+      run: mvn test
+
+    - name: Build with Maven
+      run: mvn -DskipTests -B package --no-transfer-progress --file ./pom.xml
+
+    - uses: actions/upload-artifact@master
+      with:
+          name: digibank.war
+          path: ./target/*digitalbank*.war
