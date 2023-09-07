@@ -1,0 +1,12 @@
+name: afternoon build at 15h40
+
+on:
+ schedule:
+  - cron: '40 15 * * *'
+
+jobs:
+ afternoon_build:
+   runs-on: window-latest
+   steps:
+    - name: Checkout
+      uses:
